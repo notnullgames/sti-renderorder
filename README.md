@@ -5,7 +5,11 @@ I am still working on this
 # sti-renderorder
 Allow grouped layers to swap render-order in [STI](https://github.com/karai17/Simple-Tiled-Implementation) a loader for maps made in [tiled](https://www.mapeditor.org/) for love2d.
 
-This will allow you to have things in your map that can be "behind" or "in front of" your character, as they move around.
+This will allow you to have things in your map that can be "behind" or "in front of" your character, as they move around. This is meant to fix this issue:
+
+
+![render-order is not correct](problem.gif)
+
 
 ## usage
 
