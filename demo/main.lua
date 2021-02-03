@@ -16,7 +16,8 @@ local walkSpeed = 0.4
 function love.load()
   map = sti("assets/map01.lua")
 
-  local location = { x=0, y=0, height = 32, width = 32 }
+  -- this tracks position of player, and will be put back in player.location
+  local location = { x = 0, y = 0, height = 32, width = 32 }
 
   -- get initial location from placement of "player" object in "player" layer
   for i,object in pairs(map.layers.player.objects) do
