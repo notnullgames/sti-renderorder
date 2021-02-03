@@ -6,4 +6,4 @@ I did add basic collisions, to add some realism to the behavior. It's a little w
 
 ## asset credits
 
-I got the terrain assets from [here](https://opengameart.org/content/lpc-tile-atlas) and created the player with [universal sprites](https://notnullgames.github.io/universal-sprites/).
+I got the terrain assets from [here](https://opengameart.org/content/lpc-tile-atlas) and created the player with my [universal sprites](https://notnullgames.github.io/universal-sprites/).
