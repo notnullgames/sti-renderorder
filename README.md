@@ -20,16 +20,17 @@ First, make a layer-group in your map that has the string custom-property `z` wh
 
 Next, put sti-renderorder.lua in your project's path.
 
-Next, load your map in STI, as you normally would, but with one extra step:
+Next, load your map in STI, as you normally would, but with a couple extra steps:
 
 ```lua
 local sti = require "sti"
 local sti_renderorder = require "sti-renderorder"
 
 map = sti("maps/map01.lua")
+sti_renderorder(map)
 
--- do this in draw or update, second param is rect to compare
-sti_renderorder(map, { x = 100, y = 100, height = 32, width = 32 })
+-- do this in draw or update, param is rect to compare, like "player" object that can move in front or behind things
+map:renderorder({ x = 100, y = 100, height = 32, width = 32 })
 ```
 
 Now, everything should work the same, but all the layers in your group will decide which to render on top or on bottom, depending on the `z` property.

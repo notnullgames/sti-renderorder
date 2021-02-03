@@ -15,6 +15,7 @@ local walkSpeed = 0.4
 
 function love.load()
   map = sti("assets/map01.lua")
+  sti_renderorder(map)
 
   -- this tracks position of player, and will be put back in player.location
   local location = { x = 0, y = 0, height = 32, width = 32 }
@@ -55,7 +56,6 @@ function love.load()
 end
 
 function love.update(dt)
-  map:update(dt)
   local walking = false
   -- manage player animation & position based on keys 
   if love.keyboard.isDown("down") then
@@ -84,9 +84,10 @@ function love.update(dt)
     player.animations[player.direction]:gotoFrame(1)
     player.animations[player.direction]:pause()
   end
+  map:update(dt)
 end
 
 function love.draw()
-  sti_renderorder(map, player.location)
+  map:renderorder(player.location)
   map:draw(0, 0)
 end
