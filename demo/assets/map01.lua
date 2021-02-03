@@ -76,32 +76,6 @@ return {
       data = "eJxjYMAPVhGQJxVQ27xRQB4IAOJAJBxEoXkFQFyIhIuoZB4Dlc0bKe6bAMQTkfAkCs0bBaMAGwAACrkP5g=="
     },
     {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 9,
-      name = "player",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      properties = {},
-      objects = {
-        {
-          id = 1,
-          name = "player",
-          type = "",
-          shape = "rectangle",
-          x = 256,
-          y = 128,
-          width = 32,
-          height = 32,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
       type = "group",
       id = 3,
       name = "renderorder",
@@ -148,6 +122,32 @@ return {
           encoding = "base64",
           compression = "zlib",
           data = "eJxjYBgFwwFUMTEwVANxDRN1zJsFNGc2EM+hknmDHfxkZGD4BcS/GaljniQw3KSAWJpK4WcJNMcKiK1HSHyMgqEBAFp/B0g="
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 9,
+      name = "player",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      objects = {
+        {
+          id = 1,
+          name = "player",
+          type = "",
+          shape = "rectangle",
+          x = 256,
+          y = 128,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

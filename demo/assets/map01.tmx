@@ -14,9 +14,6 @@
    eJxjYMAPVhGQJxVQ27xRQB4IAOJAJBxEoXkFQFyIhIuoZB4Dlc0bKe6bAMQTkfAkCs0bBaMAGwAACrkP5g==
   </data>
  </layer>
- <objectgroup id="9" name="player">
-  <object id="1" name="player" x="256" y="128" width="32" height="32"/>
- </objectgroup>
  <group id="3" name="renderorder">
   <layer id="5" name="stuff" width="20" height="20">
    <properties>
@@ -35,6 +32,9 @@
   </data>
   </layer>
  </group>
+ <objectgroup id="9" name="player">
+  <object id="1" name="player" x="256" y="128" width="32" height="32"/>
+ </objectgroup>
  <layer id="4" name="over1" width="20" height="20">
   <data encoding="base64" compression="zlib">
    eJztzMERgCAQBMEj/wgUJQ8FzUNAY3Fi4B762Knq567Zv1qC2YoUxj8mtjMiCg6cjr+N7Y6MjhuP4+9iW9EcH0op9XUv20oNQg==

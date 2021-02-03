@@ -35,9 +35,6 @@ function love.load()
   -- turn "player" into a custom-layer that tells us where to put the player
   player = map:convertToCustomLayer("player")
 
-  -- tell renderorder which layer to adjust to
-  sti_renderorder(map, player)
-
   -- set location to x/y I got before the conversion & add to collision-world
   player.location = location
   world:add(player, player.location.x, player.location.y, player.location.width, player.location.height)
@@ -61,6 +58,10 @@ function love.load()
   function player:draw()
     player.animations[player.direction]:draw(player.image, player.location.x, player.location.y)
   end
+
+  -- tell renderorder which layer to adjust to & how to lookup player
+  -- do this after all else is setup
+  sti_renderorder(map, player, player.location)
 end
 
 function love.update(dt)
@@ -104,7 +105,5 @@ function love.update(dt)
 end
 
 function love.draw()
-  -- tell renderorder the current position to check for overlaps
-  map:renderorder(player.location)
   map:draw(0, 0)
 end
