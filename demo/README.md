@@ -1,4 +1,4 @@
-This is a demo of [sti-renderer](https://github.com/notnullgames/sti-renderer).
+This is a demo of [sti-renderer](https://github.com/notnullgames/sti-renderorder).
 
 It's not really a complete game demo, it just shows how the player can be under & over things, depending on which is in "front". For your own, you'd probly want to improve collision and do a lot more.
 
