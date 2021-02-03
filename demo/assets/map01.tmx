@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="2">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="19">
  <editorsettings>
   <export target="map01.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="lpc_terrain.tsx"/>
  <layer id="1" name="ground 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJzrZGJg6ALibiDuAeJOCvnYxLqgmFhxZD4+u7ooNLuHBDW41FHbv7j45MYLpfGJzqeWOaPuG3UfOXxqmtWJQ44Uc4gp/+jJJ6d8poQPALXl234=
+   eJy7xsTAcB2IbwDxTSC+BcTXoGLX8MjBxAjxKTWvC4i7gbgHiDvR+F1IGJccujg2dcSowaWOFPXEugkbnxw95NqFj08tc0bdN+o+cvjUNKsThxwp5qDLUTPsyOETUktt+wBwneeO
   </data>
  </layer>
  <layer id="2" name="ground 2" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFIxEEAHEgEg6i0LwCIC5EwkVUMo+ByuaNFPdNAOKJSHgSheaNglGADQAAHOEOkg==
+   eJxjYMAPVhGQJxVQ27xRQB4IAOJAJBxEoXkFQFyIhIuoZB4Dlc0bKe6bAMQTkfAkCs0bBaMAGwAACrkP5g==
   </data>
  </layer>
  <group id="3" name="renderorder">
@@ -42,4 +42,23 @@
    eJxjYBgcYA4jA8NcIJ7HSB3z9gDN2QvE+6hk3h2gOXeB+B6VzBsFo2AUjIKhDgDOJAav
   </data>
  </layer>
+ <objectgroup id="10" name="collisions">
+  <properties>
+   <property name="collidable" type="bool" value="true"/>
+  </properties>
+  <object id="2" x="234.88" y="260.193" width="8.67582" height="7.86751"/>
+  <object id="4" x="492.884" y="397.961" width="6.58043" height="6.28619"/>
+  <object id="5" x="586.666" y="411.747" width="9.74191" height="8.3081"/>
+  <object id="6" x="556.321" y="171.448" width="5.84503" height="6.05674"/>
+  <object id="7" x="492.798" y="172.514" width="6.06561" height="5.88191"/>
+  <object id="8" x="460.945" y="171.381" width="5.84503" height="6.01986"/>
+  <object id="9" x="171.05" y="237.808" width="6.69048" height="4.56779"/>
+  <object id="10" x="362.889" y="236.203" width="7.86694" height="4.4329"/>
+  <object id="11" x="117.165" y="100.385" width="15.4396" height="9.24229"/>
+  <object id="12" x="53.895" y="131.97" width="17.1309" height="9.85561"/>
+  <object id="14" x="299.621" y="260.535" width="8.67582" height="7.61836"/>
+  <object id="15" x="267.365" y="516.974" width="8.67582" height="7.53555"/>
+  <object id="16" x="0.802311" y="0.802311" width="245.507" height="46.534"/>
+  <object id="17" x="297.657" y="3.20924" width="341.784" height="44.1271"/>
+ </objectgroup>
 </map>

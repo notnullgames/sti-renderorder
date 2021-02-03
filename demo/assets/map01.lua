@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 32,
   tileheight = 32,
-  nextlayerid = 10,
-  nextobjectid = 2,
+  nextlayerid = 11,
+  nextobjectid = 19,
   properties = {},
   tilesets = {
     {
@@ -56,7 +56,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJzrZGJg6ALibiDuAeJOCvnYxLqgmFhxZD4+u7ooNLuHBDW41FHbv7j45MYLpfGJzqeWOaPuG3UfOXxqmtWJQ44Uc4gp/+jJJ6d8poQPALXl234="
+      data = "eJy7xsTAcB2IbwDxTSC+BcTXoGLX8MjBxAjxKTWvC4i7gbgHiDvR+F1IGJccujg2dcSowaWOFPXEugkbnxw95NqFj08tc0bdN+o+cvjUNKsThxwp5qDLUTPsyOETUktt+wBwneeO"
     },
     {
       type = "tilelayer",
@@ -73,7 +73,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJxjYBgFIxEEAHEgEg6i0LwCIC5EwkVUMo+ByuaNFPdNAOKJSHgSheaNglGADQAAHOEOkg=="
+      data = "eJxjYMAPVhGQJxVQ27xRQB4IAOJAJBxEoXkFQFyIhIuoZB4Dlc0bKe6bAMQTkfAkCs0bBaMAGwAACrkP5g=="
     },
     {
       type = "group",
@@ -182,6 +182,203 @@ return {
       encoding = "base64",
       compression = "zlib",
       data = "eJxjYBgcYA4jA8NcIJ7HSB3z9gDN2QvE+6hk3h2gOXeB+B6VzBsFo2AUjIKhDgDOJAav"
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 10,
+      name = "collisions",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {
+        ["collidable"] = true
+      },
+      objects = {
+        {
+          id = 2,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 234.88,
+          y = 260.193,
+          width = 8.67582,
+          height = 7.86751,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 4,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 492.884,
+          y = 397.961,
+          width = 6.58043,
+          height = 6.28619,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 5,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 586.666,
+          y = 411.747,
+          width = 9.74191,
+          height = 8.3081,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 6,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 556.321,
+          y = 171.448,
+          width = 5.84503,
+          height = 6.05674,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 7,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 492.798,
+          y = 172.514,
+          width = 6.06561,
+          height = 5.88191,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 8,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 460.945,
+          y = 171.381,
+          width = 5.84503,
+          height = 6.01986,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 9,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 171.05,
+          y = 237.808,
+          width = 6.69048,
+          height = 4.56779,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 10,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 362.889,
+          y = 236.203,
+          width = 7.86694,
+          height = 4.4329,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 11,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 117.165,
+          y = 100.385,
+          width = 15.4396,
+          height = 9.24229,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 12,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 53.895,
+          y = 131.97,
+          width = 17.1309,
+          height = 9.85561,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 14,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 299.621,
+          y = 260.535,
+          width = 8.67582,
+          height = 7.61836,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 15,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 267.365,
+          y = 516.974,
+          width = 8.67582,
+          height = 7.53555,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 16,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0.802311,
+          y = 0.802311,
+          width = 245.507,
+          height = 46.534,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 17,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 297.657,
+          y = 3.20924,
+          width = 341.784,
+          height = 44.1271,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
     }
   }
 }
