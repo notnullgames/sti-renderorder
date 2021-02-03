@@ -14,7 +14,7 @@ This will allow you to have things in your map that can be "behind" or "in front
 
 ## usage
 
-First, make a layer-group in your map that has the string custom-property `z` which can be either `x` or `y`:
+First, make a layers in your map that has the string custom-property `z` which can be either `x` or `y`:
 
 ![screenshot of properties in tiled](images/screen1.png)
 
@@ -27,7 +27,9 @@ local sti = require "sti"
 local sti_renderorder = require "sti-renderorder"
 
 map = sti("maps/map01.lua")
-sti_renderorder(map)
+
+-- 2nd param is layers that should rendered over or under depending on position
+sti_renderorder(map, {})
 
 -- do this in draw or update, param is rect to compare, like "player" object that can move in front or behind things
 map:renderorder({ x = 100, y = 100, height = 32, width = 32 })

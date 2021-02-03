@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="19">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="23">
  <editorsettings>
   <export target="map01.lua" format="lua"/>
  </editorsettings>
@@ -14,24 +14,27 @@
    eJxjYMAPVhGQJxVQ27xRQB4IAOJAJBxEoXkFQFyIhIuoZB4Dlc0bKe6bAMQTkfAkCs0bBaMAGwAACrkP5g==
   </data>
  </layer>
+ <objectgroup id="9" name="player">
+  <object id="1" name="player" x="256" y="128" width="32" height="32"/>
+ </objectgroup>
  <group id="3" name="renderorder">
-  <properties>
-   <property name="z" value="y"/>
-  </properties>
   <layer id="5" name="stuff" width="20" height="20">
+   <properties>
+    <property name="ysort" type="bool" value="true"/>
+   </properties>
    <data encoding="base64" compression="zlib">
    eJxjYBj8YAIjA8NEIJ4MxFMYKTdvA9CMjUC8GYi3kGFeJBMq/wLQjItYzNnNjMDYzICZg24eLnCbGYGRQRVQfzUQ1zChsnGBAzjkYOKzgPRsIJ7DhMrGBR5A5SYxotIPiPQXLrCJEZUmF/zGEv7EyFELzAPaMR+IF1BoFyyd7AOasx+ID1BgHnI6uQc05z4QP6DAPOR08g9ozn+QWSzkm0cumESF8gEZUJr2hjsAAH+cKTA=
   </data>
   </layer>
   <layer id="8" name="stuff2" width="20" height="20">
+   <properties>
+    <property name="ysort" type="bool" value="true"/>
+   </properties>
    <data encoding="base64" compression="zlib">
    eJxjYBgFwwFUMTEwVANxDRN1zJsFNGc2EM+hknmDHfxkZGD4BcS/GaljniQw3KSAWJpK4WcJNMcKiK1HSHyMgqEBAFp/B0g=
   </data>
   </layer>
  </group>
- <objectgroup id="9" name="player">
-  <object id="1" name="player" x="256" y="128" width="32" height="32"/>
- </objectgroup>
  <layer id="4" name="over1" width="20" height="20">
   <data encoding="base64" compression="zlib">
    eJztzMERgCAQBMEj/wgUJQ8FzUNAY3Fi4B762Knq567Zv1qC2YoUxj8mtjMiCg6cjr+N7Y6MjhuP4+9iW9EcH0op9XUv20oNQg==
@@ -60,5 +63,8 @@
   <object id="15" x="267.365" y="516.974" width="8.67582" height="7.53555"/>
   <object id="16" x="0.802311" y="0.802311" width="245.507" height="46.534"/>
   <object id="17" x="297.657" y="3.20924" width="341.784" height="44.1271"/>
+  <object id="20" x="638.639" y="0.802311" width="15.2439" height="651.476"/>
+  <object id="21" x="1.60462" y="640.244" width="636.232" height="11.2323"/>
+  <object id="22" x="-11.2323" y="0.802311" width="11.2323" height="650.674"/>
  </objectgroup>
 </map>

@@ -5,7 +5,7 @@ local sti = require "sti"
 local sti_renderorder = require "sti-renderorder"
 local anim8 = require "anim8"
 local bump = require "bump"
-local pprint = require "pprint"
+pprint = require "pprint"
 
 love.window.setMode(640, 640, {resizable=false})
 love.window.setTitle("sti-renderorder demo")
@@ -20,7 +20,6 @@ function love.load()
   map = sti("assets/map01.lua", { "bump" })
   map.layers.collisions.visible = false
   map:bump_init(world)
-  sti_renderorder(map)
 
   -- this tracks position of player, and will be put back in player.location
   local location = { x = 0, y = 0, height = 32, width = 32 }
@@ -35,6 +34,9 @@ function love.load()
 
   -- turn "player" into a custom-layer that tells us where to put the player
   player = map:convertToCustomLayer("player")
+
+  -- tell renderorder which layer to adjust to
+  sti_renderorder(map, player)
 
   -- set location to x/y I got before the conversion & add to collision-world
   player.location = location
@@ -102,6 +104,7 @@ function love.update(dt)
 end
 
 function love.draw()
+  -- tell renderorder the current position to check for overlaps
   map:renderorder(player.location)
   map:draw(0, 0)
 end

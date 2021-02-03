@@ -9,7 +9,7 @@ return {
   tilewidth = 32,
   tileheight = 32,
   nextlayerid = 11,
-  nextobjectid = 19,
+  nextobjectid = 23,
   properties = {},
   tilesets = {
     {
@@ -76,54 +76,6 @@ return {
       data = "eJxjYMAPVhGQJxVQ27xRQB4IAOJAJBxEoXkFQFyIhIuoZB4Dlc0bKe6bAMQTkfAkCs0bBaMAGwAACrkP5g=="
     },
     {
-      type = "group",
-      id = 3,
-      name = "renderorder",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      properties = {
-        ["z"] = "y"
-      },
-      layers = {
-        {
-          type = "tilelayer",
-          x = 0,
-          y = 0,
-          width = 20,
-          height = 20,
-          id = 5,
-          name = "stuff",
-          visible = true,
-          opacity = 1,
-          offsetx = 0,
-          offsety = 0,
-          properties = {},
-          encoding = "base64",
-          compression = "zlib",
-          data = "eJxjYBj8YAIjA8NEIJ4MxFMYKTdvA9CMjUC8GYi3kGFeJBMq/wLQjItYzNnNjMDYzICZg24eLnCbGYGRQRVQfzUQ1zChsnGBAzjkYOKzgPRsIJ7DhMrGBR5A5SYxotIPiPQXLrCJEZUmF/zGEv7EyFELzAPaMR+IF1BoFyyd7AOasx+ID1BgHnI6uQc05z4QP6DAPOR08g9ozn+QWSzkm0cumESF8gEZUJr2hjsAAH+cKTA="
-        },
-        {
-          type = "tilelayer",
-          x = 0,
-          y = 0,
-          width = 20,
-          height = 20,
-          id = 8,
-          name = "stuff2",
-          visible = true,
-          opacity = 1,
-          offsetx = 0,
-          offsety = 0,
-          properties = {},
-          encoding = "base64",
-          compression = "zlib",
-          data = "eJxjYBgFwwFUMTEwVANxDRN1zJsFNGc2EM+hknmDHfxkZGD4BcS/GaljniQw3KSAWJpK4WcJNMcKiK1HSHyMgqEBAFp/B0g="
-        }
-      }
-    },
-    {
       type = "objectgroup",
       draworder = "topdown",
       id = 9,
@@ -146,6 +98,56 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "group",
+      id = 3,
+      name = "renderorder",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      layers = {
+        {
+          type = "tilelayer",
+          x = 0,
+          y = 0,
+          width = 20,
+          height = 20,
+          id = 5,
+          name = "stuff",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          properties = {
+            ["ysort"] = true
+          },
+          encoding = "base64",
+          compression = "zlib",
+          data = "eJxjYBj8YAIjA8NEIJ4MxFMYKTdvA9CMjUC8GYi3kGFeJBMq/wLQjItYzNnNjMDYzICZg24eLnCbGYGRQRVQfzUQ1zChsnGBAzjkYOKzgPRsIJ7DhMrGBR5A5SYxotIPiPQXLrCJEZUmF/zGEv7EyFELzAPaMR+IF1BoFyyd7AOasx+ID1BgHnI6uQc05z4QP6DAPOR08g9ozn+QWSzkm0cumESF8gEZUJr2hjsAAH+cKTA="
+        },
+        {
+          type = "tilelayer",
+          x = 0,
+          y = 0,
+          width = 20,
+          height = 20,
+          id = 8,
+          name = "stuff2",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          properties = {
+            ["ysort"] = true
+          },
+          encoding = "base64",
+          compression = "zlib",
+          data = "eJxjYBgFwwFUMTEwVANxDRN1zJsFNGc2EM+hknmDHfxkZGD4BcS/GaljniQw3KSAWJpK4WcJNMcKiK1HSHyMgqEBAFp/B0g="
         }
       }
     },
@@ -374,6 +376,45 @@ return {
           y = 3.20924,
           width = 341.784,
           height = 44.1271,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 20,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 638.639,
+          y = 0.802311,
+          width = 15.2439,
+          height = 651.476,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1.60462,
+          y = 640.244,
+          width = 636.232,
+          height = 11.2323,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -11.2323,
+          y = 0.802311,
+          width = 11.2323,
+          height = 650.674,
           rotation = 0,
           visible = true,
           properties = {}
