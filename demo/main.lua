@@ -11,16 +11,18 @@ love.window.setTitle("sti-renderorder demo")
 
 local map
 local player
+local walkSpeed = 0.4
 
 function love.load()
   map = sti("assets/map01.lua")
 
-  local location = { x=0, y=0 }
+  local location = { x=0, y=0, height = 32, width = 32 }
 
   -- get initial location from placement of "player" object in "player" layer
   for i,object in pairs(map.layers.player.objects) do
     if object.name == "player" then
-      location = { x = object.x, y = object.y }
+      location.x = object.x
+      location.y = object.y
     end
   end
 
@@ -40,6 +42,7 @@ function love.load()
     right = anim8.newAnimation(g("1-9", 4), 0.1)
   }
   player.direction = "down"
+  player.animations[player.direction]:pause()
 
   function player:update(dt)
     player.animations[player.direction]:update(dt)
@@ -50,10 +53,39 @@ function love.load()
   end
 end
 
-function love.update()
+function love.update(dt)
+  map:update(dt)
+  local walking = false
+  -- manage player animation & position based on keys 
+  if love.keyboard.isDown("down") then
+    player.direction = "down"
+    walking = true
+    player.location.y = player.location.y + walkSpeed
+  end
+  if love.keyboard.isDown("up") then
+    player.direction = "up"
+    walking = true
+    player.location.y = player.location.y - walkSpeed
+  end
+  if love.keyboard.isDown("left") then
+    player.direction = "left"
+    walking = true
+    player.location.x = player.location.x - walkSpeed
+  end
+  if love.keyboard.isDown("right") then
+    player.direction = "right"
+    walking = true
+    player.location.x = player.location.x + walkSpeed
+  end
+  if walking then
+    player.animations[player.direction]:resume()
+  else
+    player.animations[player.direction]:gotoFrame(1)
+    player.animations[player.direction]:pause()
+  end
 end
 
 function love.draw()
-  sti_renderorder(map)
+  sti_renderorder(map, player.location)
   map:draw(0, 0)
 end

@@ -28,8 +28,8 @@ local sti_renderorder = require "sti-renderorder"
 
 map = sti("maps/map01.lua")
 
--- do this in draw or update
-sti_renderorder(map)
+-- do this in draw or update, second param is rect to compare
+sti_renderorder(map, { x = 100, y = 100, height = 32, width = 32 })
 ```
 
 Now, everything should work the same, but all the layers in your group will decide which to render on top or on bottom, depending on the `z` property.

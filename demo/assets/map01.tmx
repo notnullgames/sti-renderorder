@@ -20,7 +20,7 @@
   </properties>
   <layer id="5" name="stuff" width="20" height="20">
    <data encoding="base64" compression="zlib">
-   eJxjYBj8YAIjA8NEIJ4MxFMYKTdvA9CMjUC8GYi3kGFeJBMq/wLQjIskmgMyA2YOunmkgiqg/mogrmFCZZMLZgH1zgbiOUyo7FFAHpjHzMAwH4gXMFNmDiyd7AOasx+ID1BgHnI6uQc05z4QP6DAPOR08g9ozn+QWSzkm0cumESF8gEZbKKyecMNAAA4bByM
+   eJxjYBj8YAIjA8NEIJ4MxFMYKTdvA9CMjUC8GYi3kGFeJBMq/wLQjItYzNnNjMDYzICZg24eLnCbGYGRQRVQfzUQ1zChsnGBAzjkYOKzgPRsIJ7DhMrGBR5A5SYxotIPiPQXLrCJEZUmF/zGEv7EyFELzAPaMR+IF1BoFyyd7AOasx+ID1BgHnI6uQc05z4QP6DAPOR08g9ozn+QWSzkm0cumESF8gEZUJr2hjsAAH+cKTA=
   </data>
   </layer>
   <layer id="8" name="stuff2" width="20" height="20">

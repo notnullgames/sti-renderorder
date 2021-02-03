@@ -102,7 +102,7 @@ return {
           properties = {},
           encoding = "base64",
           compression = "zlib",
-          data = "eJxjYBj8YAIjA8NEIJ4MxFMYKTdvA9CMjUC8GYi3kGFeJBMq/wLQjIskmgMyA2YOunmkgiqg/mogrmFCZZMLZgH1zgbiOUyo7FFAHpjHzMAwH4gXMFNmDiyd7AOasx+ID1BgHnI6uQc05z4QP6DAPOR08g9ozn+QWSzkm0cumESF8gEZbKKyecMNAAA4bByM"
+          data = "eJxjYBj8YAIjA8NEIJ4MxFMYKTdvA9CMjUC8GYi3kGFeJBMq/wLQjItYzNnNjMDYzICZg24eLnCbGYGRQRVQfzUQ1zChsnGBAzjkYOKzgPRsIJ7DhMrGBR5A5SYxotIPiPQXLrCJEZUmF/zGEv7EyFELzAPaMR+IF1BoFyyd7AOasx+ID1BgHnI6uQc05z4QP6DAPOR08g9ozn+QWSzkm0cumESF8gEZUJr2hjsAAH+cKTA="
         },
         {
           type = "tilelayer",
