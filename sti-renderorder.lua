@@ -53,7 +53,7 @@ local function sti_renderorder(map, renderorder_layer, location)
         if layer.data[m[2]] and layer.data[m[2]][m[1]] then
           found = true
           if map.sti_renderorder_debug then
-            table.insert(overlapping, layer.name)
+            table.insert(overlapping, {layer, m})
           end
         end
       end
@@ -65,7 +65,15 @@ local function sti_renderorder(map, renderorder_layer, location)
       end
     end
     if map.sti_renderorder_debug then
-      love.graphics.print(table.concat(overlapping, ","), 0, 0 )
+      -- add labels for overlaps and show them
+      local text = {}
+      for _,overlap in pairs(overlapping) do
+        local layer = overlap[1]
+        local m = overlap[2]
+        table.insert(text, layer.name)
+        love.graphics.print(layer.data[m[2]][m[1]].id, m[1]*32, m[2]*32 )
+      end
+      love.graphics.print(table.concat(text, ","), 0, 0 )
     end
   end
 end
