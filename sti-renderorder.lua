@@ -16,21 +16,26 @@ local function sti_renderorder(map, renderorder_layer, location)
   function renderorder_layer:draw()
     
     local targetx, targety = map:convertPixelToTile (location.x, location.y)
-    targetx = math.floor(targetx)
-    targety = math.floor(targety)
     
     -- list of square-positions to check for overlap
     local matrix = {
-      { targetx, targety},
-      -- { targetx, targety + 1},
-      -- { targetx, targety - 1},
-      -- { targetx-1 , targety},
-      -- { targetx+1, targety},
+      { math.floor(targetx), math.floor(targety)},
+      { math.ceil(targetx), math.ceil(targety)}
     }
 
     if map.sti_renderorder_debug then
-      love.graphics.setColor(1,0,0,0.2)
       for _,m in pairs(matrix) do
+        local hit = false
+        for _,layer in pairs(layers) do
+          if layer.data[m[2]] and layer.data[m[2]][m[1]] then
+            hit = true
+          end
+        end
+        if hit then
+          love.graphics.setColor(1,0,0,0.2)
+        else
+          love.graphics.setColor(0,0,1,0.2)
+        end
         love.graphics.rectangle("fill", m[1]*32, m[2]*32, 32,32)
       end
       love.graphics.setColor(1,1,1,1)
