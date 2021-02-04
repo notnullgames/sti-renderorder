@@ -21,15 +21,20 @@ local function sti_renderorder(map, renderorder_layer, location)
     
     -- list of square-positions to check for overlap
     local matrix = {
-      { targetx, targety + 1}
+      { targetx, targety},
+      -- { targetx, targety + 1},
+      -- { targetx, targety - 1},
+      -- { targetx-1 , targety},
+      -- { targetx+1, targety},
     }
 
-    -- debug: show where it's checking for hit
-    love.graphics.setColor(1,0,0,0.2)
-    for _,m in pairs(matrix) do
-      love.graphics.rectangle("fill", m[1]*32, m[2]*32, 32,32)
+    if map.sti_renderorder_debug then
+      love.graphics.setColor(1,0,0,0.2)
+      for _,m in pairs(matrix) do
+        love.graphics.rectangle("fill", m[1]*32, m[2]*32, 32,32)
+      end
+      love.graphics.setColor(1,1,1,1)
     end
-    love.graphics.setColor(1,1,1,1)
 
     orig_draw()
 

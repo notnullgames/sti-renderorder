@@ -61,6 +61,7 @@ function love.load()
 
   -- tell renderorder which layer to adjust to & how to lookup player
   -- do this after all else is setup
+  map.sti_renderorder_debug = true
   sti_renderorder(map, player, player.location)
 end
 
