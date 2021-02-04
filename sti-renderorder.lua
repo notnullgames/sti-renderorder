@@ -20,7 +20,9 @@ local function sti_renderorder(map, renderorder_layer, location)
     -- list of square-positions to check for overlap
     local matrix = {
       { math.floor(targetx), math.floor(targety)},
-      { math.ceil(targetx), math.ceil(targety)}
+      { math.ceil(targetx), math.ceil(targety)},
+      { math.floor(targetx), math.ceil(targety)},
+      { math.ceil(targetx), math.floor(targety)}
     }
 
     if map.sti_renderorder_debug then
@@ -43,11 +45,16 @@ local function sti_renderorder(map, renderorder_layer, location)
 
     orig_draw()
 
+    local overlapping = {}
     for _,layer in pairs(layers) do
       local found = false
+      
       for _,m in pairs(matrix) do
         if layer.data[m[2]] and layer.data[m[2]][m[1]] then
           found = true
+          if map.sti_renderorder_debug then
+            table.insert(overlapping, layer.name)
+          end
         end
       end
       if found then
@@ -56,6 +63,9 @@ local function sti_renderorder(map, renderorder_layer, location)
       else
         layer:orig_draw()
       end
+    end
+    if map.sti_renderorder_debug then
+      love.graphics.print(table.concat(overlapping, ","), 0, 0 )
     end
   end
 end
