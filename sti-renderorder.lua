@@ -1,9 +1,3 @@
-local function in_front(location, layer)
-  -- always "behind"
-  return false
-end
-
-
 local function sti_renderorder(map, renderorder_layer, location)
   local orig_draw = renderorder_layer.draw
 
@@ -20,9 +14,34 @@ local function sti_renderorder(map, renderorder_layer, location)
 
   -- overwrite the renderlayer's draw function to account for front/behind
   function renderorder_layer:draw()
+    
+    local targetx, targety = map:convertPixelToTile (location.x, location.y)
+    targetx = math.floor(targetx)
+    targety = math.floor(targety)
     orig_draw()
+    
+    -- list of square-positions to check for overlap
+    local matrix = {
+      { targetx, targety+1 },
+      { targetx, targety-1 },
+      { targetx-1, targety },
+      { targetx+1, targety },
+      { targetx, tyargety }
+    }
+
+    -- for _,m in pairs(matrix) do
+    --  print(m[1], m[2])
+    --  love.graphics.rectangle("fill", m[1]*32, m[2]*32, 32,32)
+    -- end
+
     for _,layer in pairs(layers) do
-      if in_front(location, layer) then
+      local found = false
+      for _,m in pairs(matrix) do
+        if layer.data[m[2]] and layer.data[m[2]][m[1]] then
+          found = true
+        end
+      end
+      if found then
         layer:orig_draw()
         orig_draw()
       else
